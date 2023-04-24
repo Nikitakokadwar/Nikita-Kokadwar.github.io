@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+:root{
+    color:#70d175;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    outline:none;border:none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+*::selection{
+    background: #e810bc;
+    color:#333;
+
+}
+/* .0%{
+    left
+} */
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+}
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+html::-webkit-scrollbar-thumb{
+   background:rgb(216, 45, 173);
+}
+body{
+    background:#111;
+    overflow-x:hidden;
+    padding-left:35rem;
+}
+/* for coming the hi there in centre of the page */
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+/* for about me section btn */
+.btn{
+    padding:.7rem 3rem;
+    background:#333;
+    color:#fff;
+    cursor:pointer;
+    margin-top:1rem;
+    font-size:2rem;
+    border-radius:5rem;
+}
+.btn i{
+  padding:0 .5rem;
+  font-size: 1.8rem;
+}
+
+.btn:hover{
+    background: rgb(221, 40, 173);
+}
+/* this section is for about hiligting */
+.heading{
+    text-align:center;
+    margin:0 6rem;
+    font-size:4rem;
+    padding:1rem;
+    border-bottom:.1rem solid #fff4;
+    color:#fff;
+}
+/* for coloring the about to pink */
+.heading span{
+    color: rgb(208, 22, 149)
+}
+header{
+    position:fixed;
+    top:0 ; left:0;
+    z-index:1000;
+    height:100%;
+    width:35rem;
+    background: #70d175;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img {
+    height: 17rem;
+    width:17rem;
+    /* for square change it to 10% */
+    border-radius: 50%;  
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid rgb(208, 22, 149)
+}
+/* for bolding the name */
+header .user .name{
+    font-size:3.5rem;
+    color:black;
+}
+/* for bolding the post */
+header .user .post{
+    font-size:3rem;
+    color:black;
+}
+header .navbar{
+    width:100%;
+}
+header .navbar ul{
+    list-style:none;
+    padding:1rem 3rem;
+    /* color:white; */
+}
+/* for the all bar down side of my photo */
+header .navbar ul li a{
+   display:block;
+   padding:1rem;
+   margin:1.5rem 0;
+   background:#333;
+   color:#fff;
+   font-size:2rem;
+   border-radius:5rem;
+   
+}
+/* hover is used here when we point on the home about then its color changed */
+header .navbar ul li a:hover{
+    background: rgb(187, 22, 96);
+}
+/* this section is for menu bar in right corner */
+#menu{
+    position:fixed;
+    top:2rem; right:2rem;
+    background: #333;
+    color:#fff;
+    cursor:pointer;
+    font-size:2.5rem;
+    padding:1rem 1.5rem;
+    z-index:1000;
+    display:none;
+}
+/* here i create the flex box for upper side */
+/* home is a class created inside the html */
+.home{
+    display:flex;
+    /* now about me goes to centre */
+    justify-content:center;
+    flex-flow:column;
+    padding:0 15rem;
+    width:80%;
+    height:50px;
+    background: black;
+    position:relative;
+    animation-name: animation1;
+    animation-duration: 3s;
+    animation-delay:2s;
+    animation-fill-mode:both;
+}
+/* h3 is heading given to the name */
+/* this 2 class is for the hi there */
+.home h3{
+ font-size:2.5rem;
+ color:#fff;
+}
+.home h1{
+    font-size:5rem;
+    color:#fff;
+}
+/* this is for coloring my name */
+.home h1 span{
+    color:#e810bc;
+}
+/* this is for editing the my description paragraph  */
+.home p{
+    font-size:2rem;
+    color:#eee;
+    padding:1rem 0;
+} 
+/* setting the about section */
+.about .row{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+
+}
+.about .row .info{
+    flex:1 1 48rem;
+    padding:2rem 1rem;
+    padding-left:6rem;
+}
+.about .row .info h3{
+    font-size:2rem;
+    color:#e810bc;
+    padding:1rem 0;
+    font-weight:normal;
+}
+
+
+
+.about .row .info h3 span{
+    color:#eee;
+    padding:0 .5rem;
+}
+.about .row .counter{
+flex:1 1 48rem;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+.about .row .counter .box{
+    width:20rem;
+    background:#222;
+    text-align:center;
+    padding:2rem;
+    margin:2rem; 
+   
+}
+/* .education .box-container .box{
+    width:100%;
+} */
+/* this is fo rbackground baxes for projects and all */
+.about .row .counter .box span{
+    font-size: 4rem;
+    color:#e810bc;
+   
+}
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color:#fff;
+}
+
+.education .box-container{
+display:flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+padding:1rem 0;
+padding-left:3rem;
+}
+/* box is class */
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position:relative;
+
+}
+.education .box-container .box span{
+    font-size:1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius:5rem;
+    padding: .5rem 2.5rem;
+}
+
+/* h3 because the all education 1 to betch is inside the h3 classfor appliying the white color to the text of education all education */
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top:1.5rem;
+
+} 
+/* this section is for other infor in white */
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#fff;
+    padding:1rem 0;
+
+}
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width:5rem;
+    border-radius: 50%;
+    line-height:5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background: #e810bc;
+}
+ .Portfolio .box-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+} 
+.Portfolio .box-container .box{
+    height:20rem; 
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow:hidden;
+    cursor: pointer;
+
+}
+.Portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+} 
+ .Portfolio .box-container .box:hover img{
+transform:scale(1.2); 
+}  
+.contact .row{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap:wrap; 
+}
+.contact .row form{
+    flex:1 1 45rem;
+    padding:4rem;
+    margin:2rem;
+    margin-bottom:4rem;
+}
+.contact .row form .box{
+    padding :1rem;
+    margin:1rem 0;
+    background: #333;
+    color:#fff;
+    text-transform:none;
+    font-size:1.7rem;
+    width:100%;
+}
+.contact .row form .box::placeholder{
+    text-transform:capitalize;
+}
+.contact .row form .message{
+    height:15rem;
+    resize:none;
+}
+.contact .row .content .title{
+    text-transform:uppercase;
+    color:#fff;
+    font-size:3rem;
+    padding-bottom:2rem;
+}
+.contact .row .content .info h3{
+ display:flex;
+ align-items:center;
+ font-size:2rem;
+ color:#eee;
+ padding:1rem 0;
+ font-weight:normal;
+
+}
+.contact .row .content .info h3 i{
+    padding-right:1rem;
+    color:#e810bc;
+}
+.top{
+    position:fixed;
+    bottom:7.5rem; right:2rem;
+    z-index:100;
+    display: none;
+}
+
+
+/* media queries */
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding:1rem 4rem;
+    }
+}
+@media(max-width:991px){
+    header{
+        left:-120%;
+    }
+    #menu{
+        display:block;
+    }
+    header.toggle{
+        left:0%;
+    }
+    body{
+        padding:0;
+    }
+}
+@media(max-width:768px){
+    /* header{
+       font-size:50%;
+    } */
+    html{
+        font-size: 50%;
+    }
+   
+}
+@media(max-width:400px){
+    header{
+        width:100vw;
+    }
+    .heading{
+        margin:0 3rem;
+    }
+    .about .row .counter .box{
+        width: 100%;
+
+    }
+    .education .box-container .box{
+        width: 100%;
+    }
+    .Portfolio .box-container .box{
+        width:100%;
+    }
+    .contact .row form{
+        margin:3rem 0;
+    }
+}
